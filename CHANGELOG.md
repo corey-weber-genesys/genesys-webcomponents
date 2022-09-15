@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.30.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.29.0...v3.30.0) (2022-09-15)
+
+
+### Features
+
+* **form-field:** add part to style input container width ([c8a0d68](https://github.com/MyPureCloud/genesys-webcomponents/commit/c8a0d685cd48f69e1bee0a9a122d50d1f6ae837e))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([97fa6b3](https://github.com/MyPureCloud/genesys-webcomponents/commit/97fa6b3151f83cfd00a92126cb14dafc2ec64ceb))
+
 ## [3.29.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.1...v3.29.0) (2022-09-15)
 
 
