@@ -16,3 +16,5 @@ export async function registerElements() {
     await defineCustomElements();
   }
 }
+
+export * from '../dist';

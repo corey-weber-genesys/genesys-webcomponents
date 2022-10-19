@@ -12,12 +12,16 @@ def isFeatureBranch = {
     return env.BRANCH_NAME.startsWith('feature/')
 }
 
+def isBetaBranch = {
+    return env.BRANCH_NAME.startsWith('beta/')
+}
+
 def isReleaseBranch = {
     return isMainBranch() || isMaintenanceReleaseBranch()
 }
 
 def isPublicBranch = {
-    isReleaseBranch() || isFeatureBranch()
+    isReleaseBranch() || isFeatureBranch() || isBetaBranch()
 }
 
 webappPipeline {
@@ -34,7 +38,7 @@ webappPipeline {
     buildType = {
         if (isReleaseBranch()) {
             return 'MAINLINE'
-        } else if (isFeatureBranch()) {
+        } else if (isFeatureBranch() || isBetaBranch()) {
             return 'FEATURE'
         } else {
             return 'CI'
@@ -60,11 +64,13 @@ webappPipeline {
         // (builds happen twice, legacy and FedRAMP)
         if (isReleaseBranch()) {
             sh('npm run release')
+        } else if (isBetaBranch()) {
+            sh "npm run release -- --prerelease beta"
         }
     }
     buildStep = { assetPrefix ->
         String cdnUrl = assetPrefix
-        // This is a bit of a kludge, but the build pipeline is intended for apps, which 
+        // This is a bit of a kludge, but the build pipeline is intended for apps, which
         // can use relative URLs to load assets. Because the components are running inside
         // apps, they have to load their assets from a full URL on the new UI hosting stack.
         if (assetPrefix.startsWith('/')) {
@@ -77,7 +83,7 @@ webappPipeline {
         """)
     }
     onSuccess = {
-        if (isReleaseBranch()) {
+        if (isReleaseBranch() || isBetaBranch()) {
             stage('NPM Publish') {
                 withCredentials([
                   string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
@@ -85,8 +91,13 @@ webappPipeline {
                     sh('''
                       echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
                       echo ".npmrc" >> .npmignore
-                      npm publish
                     ''')
+
+                    if (isBetaBranch()) {
+                        sh "npm publish --tag beta"
+                    } else {
+                        sh "npm publish"
+                    }
                 }
             }
 
@@ -105,7 +116,7 @@ webappPipeline {
                   wait: false
                 )
             }
-        } 
+        }
 
         stage('Run Docs Build') {
             if (isPublicBranch()) {
