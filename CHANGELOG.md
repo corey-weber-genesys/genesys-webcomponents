@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.6-beta.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.5...v3.36.6-beta.0) (2022-10-19)
+
+
+### Bug Fixes
+
+* **exports:** dateTimeFormatter module is now exported ([8a25299](https://github.com/MyPureCloud/genesys-webcomponents/commit/8a2529973f7f1a6e54d8c1aecf5ef44f01430744))
+
 ### [3.36.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.4...v3.36.5) (2022-10-18)
 
 ### [3.36.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.3...v3.36.4) (2022-10-14)
