@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.38.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.37.0...v3.38.0) (2022-10-26)
+
+
+### Features
+
+* **alert:** addition of alert component ([fc7bb2e](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc7bb2ef9f2c2f5c93c8125d7950a293ba97966c))
+
 ## [3.37.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.5...v3.37.0) (2022-10-24)
 
 
