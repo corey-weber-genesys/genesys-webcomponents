@@ -1,0 +1,5 @@
+#icon-story gux-icon {
+  width: var(--spacing-4xl);
+  height: var(--spacing-4xl);
+  margin: var(--spacing-xs);
+}

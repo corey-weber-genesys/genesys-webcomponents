@@ -8,7 +8,8 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier'
+    'prettier',
+    'plugin:storybook/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -64,7 +65,8 @@ module.exports = {
         checksVoidReturn: false
       }
     ],
-    '@typescript-eslint/no-unsafe-assignment': 'off', // 47
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    // 47
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',

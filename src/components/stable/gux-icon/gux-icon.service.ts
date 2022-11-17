@@ -15,7 +15,9 @@ async function fetchIcon(iconName: string): Promise<string> {
   }
 
   throw new Error(
-    `[gux-icon] fetching failed for icon "${iconName}" with status "${iconResponse.statusText} (${iconResponse.status})".`
+    `[gux-icon] fetching failed for icon "${iconName}" with status "${
+      iconResponse.statusText
+    } (${iconResponse.status})" from ${getAssetPath(`./icons/${iconName}.svg`)}`
   );
 }
 

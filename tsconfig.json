@@ -19,7 +19,7 @@
       "@utils/*": ["utils/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", ".storybook/docs.d.ts"],
   "exclude": ["node_modules"],
   "typedocOptions": {
     "ignoreCompilerErrors": true,

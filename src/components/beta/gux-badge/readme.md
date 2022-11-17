@@ -1,16 +1,14 @@
 # gux-badge-beta
 
-
-
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property | Attribute | Description             | Type                                        | Default     |
-| -------- | --------- | ----------------------- | ------------------------------------------- | ----------- |
-| `bold`   | `bold`    | Bold badge.             | `boolean`                                   | `false`     |
-| `color`  | `color`   | Badge background color. | `"green" \| "neutral" \| "red" \| "yellow"` | `'neutral'` |
+| Property | Attribute | Description             | Type      | Default     |
+| -------- | --------- | ----------------------- | --------- | ----------- |
+| `bold`   | `bold`    | Bold badge.             | `boolean` | `false`     |
+| `color`  | `color`   | Badge background color. | `string`  | `'neutral'` |
 
 
 ## Dependencies

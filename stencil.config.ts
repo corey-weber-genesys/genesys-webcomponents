@@ -20,6 +20,10 @@ export const config: Config = {
     {
       type: 'docs-readme'
     },
+    {
+      type: 'docs-json',
+      file: '.storybook/docs.json'
+    },
     reactOutputTarget({
       componentCorePackage: 'genesys-spark-components',
       proxiesFile:
