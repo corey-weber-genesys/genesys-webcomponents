@@ -137,3 +137,4 @@ Add an `example.html` file to your component's implementation directory with som
 Currently this project is primarily use for internal Genesys projects, so most of our issue tracking and planning
 is done in internal tools. We do still look at GitHub isssues, but please understand that we're a small team and
 may not be able to address items right away, depending on internal priorities.
+# stencil-storybook-demo

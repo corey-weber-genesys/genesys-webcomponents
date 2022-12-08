@@ -6,7 +6,8 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
-    '@pxtrn/storybook-addon-docs-stencil'
+    '@pxtrn/storybook-addon-docs-stencil',
+    '@storybook/addon-notes/register'
   ],
   framework: '@storybook/html'
 };

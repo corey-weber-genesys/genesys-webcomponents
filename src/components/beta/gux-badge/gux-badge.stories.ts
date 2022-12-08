@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/html';
-import { GuxBadgeColorOptions } from './gux-badge.types';
 import { iconNameMap } from '../../stable/gux-icon/icon-name-map';
+import readme from './readme.md';
 
 interface storyArgs {
   color: string;
@@ -16,24 +16,21 @@ export default {
   component: 'gux-badge-beta',
   argTypes: {
     color: {
-      control: 'radio',
-      options: GuxBadgeColorOptions
+      control: 'radio'
     },
-    bold: { control: 'boolean' },
-    icon: {
-      name: 'icon-name',
-      options: iconNamesList,
-      control: { type: 'select' }
-    }
+    bold: { control: 'boolean' }
+  },
+  parameters: {
+    notes: readme
   }
 } as unknown as Meta;
 
-const Template = (args: storyArgs) =>
+const BasicTemplate = (args: storyArgs) =>
   `<gux-badge-beta color="${args.color}"${args.bold ? ' bold' : ''}>${
     args.text
   }</gux-badge-beta>`;
 
-export const Basic: Story = Template.bind({});
+export const Basic: Story = BasicTemplate.bind({});
 Basic.args = {
   color: 'neutral',
   text: 'Example text',
@@ -51,4 +48,12 @@ WithIcon.args = {
   bold: false,
   text: 'Example text',
   icon: 'subtract'
+};
+
+WithIcon.argTypes = {
+  icon: {
+    name: 'icon-name',
+    options: iconNamesList,
+    control: { type: 'select' }
+  }
 };

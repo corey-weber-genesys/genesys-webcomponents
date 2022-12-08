@@ -1,5 +1,5 @@
 {
-  "timestamp": "2022-11-17T18:08:42",
+  "timestamp": "2022-11-23T17:16:29",
   "compiler": {
     "name": "@stencil/core",
     "version": "2.18.1",
@@ -1243,7 +1243,7 @@
         },
         {
           "name": "color",
-          "type": "string",
+          "type": "\"green\" | \"neutral\" | \"red\" | \"yellow\"",
           "mutable": false,
           "attr": "color",
           "reflectToAttr": false,
@@ -1252,6 +1252,19 @@
           "default": "'neutral'",
           "values": [
             {
+              "value": "green",
+              "type": "string"
+            },
+            {
+              "value": "neutral",
+              "type": "string"
+            },
+            {
+              "value": "red",
+              "type": "string"
+            },
+            {
+              "value": "yellow",
               "type": "string"
             }
           ],
