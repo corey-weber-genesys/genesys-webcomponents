@@ -9,5 +9,6 @@ module.exports = {
     '@pxtrn/storybook-addon-docs-stencil',
     '@storybook/addon-notes/register'
   ],
-  framework: '@storybook/html'
+  framework: '@storybook/html',
+  staticDirs: ['../dist']
 };

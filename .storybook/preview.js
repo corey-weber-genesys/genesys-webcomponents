@@ -22,5 +22,10 @@ export const parameters = {
   docs: {
     extractArgTypes,
     extractComponentDescription
+  },
+  options: {
+    storySort: {
+      order: ['Stable', 'Beta']
+    }
   }
 };

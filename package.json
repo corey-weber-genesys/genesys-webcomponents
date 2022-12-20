@@ -59,7 +59,7 @@
     "test.update-snapshot": "TZ=UTC stencil test --spec --e2e --updateSnapshot",
     "test.watch": "TZ=UTC stencil test --spec --e2e --watch",
     "update-en-i18n": "./scripts/update-en-i18n.js",
-    "storybook": "start-storybook -p 6006 -s dist",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s dist"
   },
   "dependencies": {

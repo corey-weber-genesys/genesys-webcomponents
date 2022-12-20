@@ -12,7 +12,7 @@ interface storyArgs {
 const iconNamesList = Object.values(iconNameMap);
 
 export default {
-  title: 'Components/Icons',
+  title: 'Stable/Icons',
   component: 'gux-icon',
   argTypes: {
     iconName: {

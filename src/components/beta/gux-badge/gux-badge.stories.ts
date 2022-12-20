@@ -12,7 +12,7 @@ interface storyArgs {
 const iconNamesList = Object.values(iconNameMap);
 
 export default {
-  title: 'Components/Badge',
+  title: 'Beta/Badge',
   component: 'gux-badge-beta',
   argTypes: {
     color: {

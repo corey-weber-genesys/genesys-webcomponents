@@ -13,7 +13,7 @@ interface storyArgs {
 }
 
 export default {
-  title: 'Components/Button',
+  title: 'Stable/Button',
   component: 'gux-button',
   parameters: { actions: { handles: ['click gux-button'] } },
   args: {
