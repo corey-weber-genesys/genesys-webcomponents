@@ -34,21 +34,13 @@ jobs:
       # Using --legacy-peer-deps because @stencil/less is unsupported and has an out of date peer dependency on @stencil/core@1
       - run: npm install --legacy-peer-deps
 
-      # This created the component specific types that are needed for eslint
-      - name: Stencil
-        run: npm run stencil
+      # Build
+      - name: Build
+        run: npm run build
 
       # Run linting
       - name: Lint
         run: npm run lint
-
-      # Runs tests
-      - name: Test
-        run: npm run test.ci
-
-      # Build
-      - name: Build
-        run: npm run build
 
   prComment:
     if: startsWith(github.head_ref, 'feature/')

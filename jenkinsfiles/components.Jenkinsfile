@@ -53,7 +53,7 @@ webappPipeline {
         sh('stencil build') // Required for lint to pass
         sh('''
           npm run lint
-          npm run test.ci.spec
+          npm run test.ci
         ''')
 
         // Run in CI step so we only run once
