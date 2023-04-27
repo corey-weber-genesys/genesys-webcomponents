@@ -60,6 +60,7 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
+    "@a11y/focus-trap": "^1.0.5",
     "@floating-ui/dom": "^1.4.2",
     "@popperjs/core": "^2.11.8",
     "google-libphonenumber": "^3.2.32",

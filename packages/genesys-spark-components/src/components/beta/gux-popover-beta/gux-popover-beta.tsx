@@ -5,6 +5,7 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop
 } from '@stencil/core';
 import {
@@ -73,6 +74,17 @@ export class GuxPopoverBeta {
 
   @Prop({ mutable: true })
   isOpen: boolean = false;
+
+  @Listen('keydown')
+  handleKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape': {
+        event.preventDefault();
+        this.dismiss();
+        break;
+      }
+    }
+  }
 
   /**
    * Fired when a user dismisses the popover

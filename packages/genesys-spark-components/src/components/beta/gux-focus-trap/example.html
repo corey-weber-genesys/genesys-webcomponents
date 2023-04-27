@@ -1,0 +1,109 @@
+<h1>gux-focus-trap-beta</h1>
+
+<gux-card-beta>
+  <div id="focus-trap-target-1">Focus not trapped example</div>
+  <gux-popover-beta
+    id="focus-trap-example-1"
+    position="top"
+    for="focus-trap-target-1"
+    display-dismiss-button
+  >
+    <h2 slot="title">Keyboard focus is not trapped in this popover</h2>
+    <div>
+      <gux-button>Button</gux-button>
+      <gux-button>Button</gux-button>
+      <gux-button>Button</gux-button>
+      <gux-button>Button</gux-button>
+      <gux-button>Button</gux-button>
+      <gux-button>Button</gux-button>
+    </div>
+  </gux-popover-beta>
+</gux-card-beta>
+
+<gux-card-beta>
+  <div id="focus-trap-target-2">Focus trapped example</div>
+  <gux-focus-trap-beta>
+    <gux-popover-beta
+      id="focus-trap-example-2"
+      position="top"
+      for="focus-trap-target-2"
+      display-dismiss-button
+    >
+      <h2 slot="title">Keyboard focus is trapped in this popover</h2>
+      <div>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+      </div>
+    </gux-popover-beta>
+  </gux-focus-trap-beta>
+</gux-card-beta>
+
+<gux-card-beta>
+  <div id="focus-trap-target-3">Focus trapped example</div>
+  <gux-focus-trap-beta active="true">
+    <gux-popover-beta
+      id="focus-trap-example-3"
+      position="top"
+      for="focus-trap-target-3"
+      display-dismiss-button
+    >
+      <h2 slot="title">Keyboard focus is trapped in this popover</h2>
+      <div>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+      </div>
+    </gux-popover-beta>
+  </gux-focus-trap-beta>
+</gux-card-beta>
+
+<gux-card-beta>
+  <div id="focus-trap-target-4">Focus not trapped example</div>
+  <gux-focus-trap-beta active="false">
+    <gux-popover-beta
+      id="focus-trap-example-4"
+      position="top"
+      for="focus-trap-target-4"
+      display-dismiss-button
+    >
+      <h2 slot="title">Keyboard focus is trapped in this popover</h2>
+      <div>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+        <gux-button>Button</gux-button>
+      </div>
+    </gux-popover-beta>
+  </gux-focus-trap-beta>
+</gux-card-beta>
+
+<style
+  onload="(function () {
+    ['1', '2', '3', '4'].forEach((index) => {
+      const target = document.getElementById('focus-trap-target-' + index);
+      const popover = document.getElementById('focus-trap-example-' + index);
+
+      target.addEventListener('mouseover', () => {
+        ['1', '2', '3', '4'].forEach((index) => {
+          document.getElementById('focus-trap-example-' + index).isOpen = false;
+        });
+
+        popover.isOpen = true;
+      });
+    });
+
+})()"
+>
+  gux-card-beta {
+    margin: 5px;
+  }
+</style>

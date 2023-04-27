@@ -6,6 +6,7 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop,
   State,
   Watch
@@ -60,6 +61,17 @@ export class GuxPopover {
    */
   @Prop()
   closeOnClickOutside: boolean = false;
+
+  @Listen('keydown')
+  handleKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape': {
+        event.preventDefault();
+        this.dismiss();
+        break;
+      }
+    }
+  }
 
   /**
    * Fired when a user dismisses the popover
