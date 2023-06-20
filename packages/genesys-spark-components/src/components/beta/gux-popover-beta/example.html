@@ -1,4 +1,9 @@
 <h1>gux-popover-beta</h1>
+
+<gux-button-slot-beta>
+  <button type="button" onclick="notify(event)">Button 1</button>
+</gux-button-slot-beta>
+
 <div class="scroll-container">
   <div class="scroll-interior">
     <div id="popover-target">Example Element</div>
@@ -7,6 +12,7 @@
       position="top"
       for="popover-target"
       is-open
+      close-on-focus-outside
     >
       <span slot="title">Title</span>
       <div style="width: 200px">
@@ -22,6 +28,10 @@
     </gux-popover-beta>
   </div>
 </div>
+
+<gux-button-slot-beta>
+  <button type="button" onclick="notify(event)">Button 2</button>
+</gux-button-slot-beta>
 
 <style
   onload="(function () {

@@ -16,6 +16,7 @@ export function OnResize(): OnResizeDecorator {
   return (proto: ComponentInterface, methodName: string) => {
     // this is to resolve the 'compiler optimization issue':
     // lifecycle events not being called when not explicitly declared in at least one of components from bundle
+    // More info here: https://medium.com/stencil-tricks/stenciljs-creating-custom-decorators-d4d8e78c5717
     (BUILD as any).connectedCallback = true;
     (BUILD as any).disconnectedCallback = true;
 

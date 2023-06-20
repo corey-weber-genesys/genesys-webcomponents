@@ -17,7 +17,8 @@ import {
   shift
 } from '@floating-ui/dom';
 
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+import { OnFocusinOutside } from '@utils/decorator/on-focusin-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { findElementById } from '@utils/dom/find-element-by-id';
 
@@ -62,6 +63,12 @@ export class GuxPopoverListBeta {
   @Prop()
   closeOnClickOutside: boolean = false;
 
+  /**
+   * Close popover when the user focuses an element outside of its bounds
+   */
+  @Prop()
+  closeOnFocusOutside: boolean = false;
+
   @Prop({ mutable: true })
   isOpen: boolean = false;
 
@@ -71,6 +78,13 @@ export class GuxPopoverListBeta {
   @Event()
   guxdismiss: EventEmitter<void>;
 
+  @OnFocusinOutside()
+  checkOnFocusinOutside() {
+    if (this.closeOnFocusOutside) {
+      this.dismiss();
+    }
+  }
+
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {
     const clickPath = event.composedPath();
@@ -79,7 +93,6 @@ export class GuxPopoverListBeta {
 
     if (
       (this.closeOnClickOutside || !this.displayDismissButton) &&
-      this.isOpen &&
       !clickedForElement
     ) {
       this.dismiss();
@@ -153,9 +166,11 @@ export class GuxPopoverListBeta {
   }
 
   private dismiss(): void {
-    const dismissEvent = this.guxdismiss.emit();
-    if (!dismissEvent.defaultPrevented) {
-      this.isOpen = false;
+    if (this.isOpen) {
+      const dismissEvent = this.guxdismiss.emit();
+      if (!dismissEvent.defaultPrevented) {
+        this.isOpen = false;
+      }
     }
   }
 
