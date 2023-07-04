@@ -50,14 +50,9 @@
       font-size: 12px;
       color: @gux-black-50;
       text-align: center;
-      text-align: left;
       background-color: @gux-grey-90;
       border: none;
       outline: none;
-
-      &.gux-input-time-hours {
-        text-align: right;
-      }
 
       &::placeholder {
         color: @gux-black-90;
@@ -145,6 +140,12 @@
         width: 16px;
         height: 16px;
       }
+    }
+
+    .gux-input-time-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
   }
 
