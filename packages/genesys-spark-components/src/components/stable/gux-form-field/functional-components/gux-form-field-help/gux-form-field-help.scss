@@ -1,0 +1,30 @@
+@import '../../../../../style/color-palette.scss';
+@import '../../../../../style/spacing.scss';
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldHelpStyle {
+  .GuxFormFieldHelpStyle {
+    .gux-form-field-help {
+      display: none;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: var(--gux-spacing-2xs) 0;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--gux-black-100);
+
+      &.gux-show {
+        display: flex;
+      }
+
+      .gux-message {
+        flex: 0 1 auto;
+        align-self: none;
+        order: 0;
+      }
+    }
+  }
+}
