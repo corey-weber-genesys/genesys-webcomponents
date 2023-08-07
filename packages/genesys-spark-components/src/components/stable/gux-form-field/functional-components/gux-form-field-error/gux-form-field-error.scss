@@ -1,0 +1,38 @@
+@import '../../../../../style/color-palette.scss';
+@import '../../../../../style/spacing.scss';
+
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldErrorStyle {
+  .gux-form-field-error {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: var(--gux-spacing-2xs) 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--gux-black-50);
+
+    &.gux-show {
+      display: flex;
+    }
+
+    gux-icon {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+      min-width: 16px;
+      min-height: 16px;
+      margin: var(--gux-spacing-3xs) var(--gux-spacing-2xs) 0 0;
+      color: var(--gux-alert-red-60);
+    }
+
+    .gux-message {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+  }
+}
