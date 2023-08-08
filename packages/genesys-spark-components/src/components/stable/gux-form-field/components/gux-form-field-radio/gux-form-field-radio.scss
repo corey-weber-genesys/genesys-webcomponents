@@ -81,11 +81,6 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200
 
 ::slotted(input[type='radio']:focus-visible)::before {
   @include gux-focus-ring;
-  color: var(--gse-ui-radioButton-icon-active-foregroundColor);
-  border-width: var(--gse-ui-radioButton-focus-border-width);
-  border-style: var(--gse-ui-radioButton-focus-border-style);
-  border-radius: var(--gse-ui-radioButton-focus-borderRadius);
-  offset: var(--gse-ui-radioButton-focus-offset);
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
