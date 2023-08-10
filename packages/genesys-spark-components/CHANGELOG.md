@@ -2,6 +2,91 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.100.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.99.0...v3.100.0) (2023-08-10)
+
+
+### Features
+
+* **defaults for time zone picker:** allows consumers to set a list of defaults for time zone picker ([849a52d](https://github.com/MyPureCloud/genesys-webcomponents/commit/849a52d778d11c7dc9caf29b89bcc7e30d01eee1))
+* **gux-time-zone-picker-beta:** add a time zone picker component ([db5a837](https://github.com/MyPureCloud/genesys-webcomponents/commit/db5a83734415e9b26609942af5226db6e275d6d2))
+
+
+### Bug Fixes
+
+* **gux-icon:** prevent updates to svgHtml if baseSvgHtml is not set ([22f3567](https://github.com/MyPureCloud/genesys-webcomponents/commit/22f3567442f5c882ba075573fe88e7174757f52a))
+* **gux-tabs:** set height on tabs and tabpanel-beta should fill space ([0edaa23](https://github.com/MyPureCloud/genesys-webcomponents/commit/0edaa236074a4f8cfc16aab69002e55df2a49751))
+* **popup:** fix floating ui implementation ([57529f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/57529f891daa30dabbfc9b048197dcb91af78b36))
+
+## [3.99.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.98.0...v3.99.0) (2023-08-09)
+
+
+### Features
+
+* **icon:** added icons requested in GDS-2038 ([8b534af](https://github.com/MyPureCloud/genesys-webcomponents/commit/8b534aff4a33f4cfd6d4341d1de98362d0b7095f))
+
+## [3.98.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.97.0...v3.98.0) (2023-08-01)
+
+
+### Features
+
+* **gux-tag-beta truncation:** fixed gux-tooltip-text to truncate properly ([5b3ff47](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b3ff47a36bbdea9e721de0aa6a2d3b9c231ac9f))
+* **tooltip ellipsis fix:** tooltip show/hide logic fix ([dfbd564](https://github.com/MyPureCloud/genesys-webcomponents/commit/dfbd56448b84987ee9b846ac89940682b3a7b7b2))
+
+## [3.97.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.96.0...v3.97.0) (2023-07-29)
+
+
+### Features
+
+* **listbox:** made empty message configurable ([fdad865](https://github.com/MyPureCloud/genesys-webcomponents/commit/fdad8655938a551d7fe5e70141350c29eb09ff04))
+
+## [3.96.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.95.0...v3.96.0) (2023-07-26)
+
+
+### Features
+
+* **date-time:** added ability to set time zone ([83e0049](https://github.com/MyPureCloud/genesys-webcomponents/commit/83e0049fea7cfe85bdfa86f94a47bf2d689e09c1))
+
+
+### Bug Fixes
+
+* **commitlint:** fixed broken build ([0777475](https://github.com/MyPureCloud/genesys-webcomponents/commit/07774756dee3cb5ba6f81248147acedb1619dc8d))
+
+## [3.95.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.94.0...v3.95.0) (2023-07-20)
+
+
+### Features
+
+* **icon:** icons requested in sprint gds23-2 ([7692df4](https://github.com/MyPureCloud/genesys-webcomponents/commit/7692df43fdc1f765750cabe20b53615f99d461ac))
+
+## [3.94.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.6...v3.94.0) (2023-07-19)
+
+
+### Features
+
+* **icons:** various requested icons ([f12b8e8](https://github.com/MyPureCloud/genesys-webcomponents/commit/f12b8e8c212c4007192911577fb2b43a60029802))
+* **icons:** various requested icons ([21faa1b](https://github.com/MyPureCloud/genesys-webcomponents/commit/21faa1bd81b7f48454a1580f4c6e3de6b51d0e77))
+
+
+### Bug Fixes
+
+* **popover:** find-element-by-id tries to call getElementById non-document node ([b4ad131](https://github.com/MyPureCloud/genesys-webcomponents/commit/b4ad1311c70f81d265cabcf7241e115a68222a79))
+
+### [3.93.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.5...v3.93.6) (2023-07-18)
+
+
+### Bug Fixes
+
+* **gux-popup-beta:** hide popup when target element goes out of view ([011b683](https://github.com/MyPureCloud/genesys-webcomponents/commit/011b68354f4cfac9baba1c6a28c1875194a14545))
+
+### [3.93.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.4...v3.93.5) (2023-07-14)
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([5f4a660](https://github.com/MyPureCloud/genesys-webcomponents/commit/5f4a660b42965c58f13471b4eabb5f96d472a160))
+
+### [3.93.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.3...v3.93.4) (2023-07-12)
+
 ### [3.93.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.2...v3.93.3) (2023-07-12)
 
 
