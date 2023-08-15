@@ -14,7 +14,8 @@
       font-size: 12px;
       font-weight: 400;
       line-height: 20px;
-      color: var(--gux-black-100);
+      font-family: Noto Sans;
+      color: #626e84; // TODO: maybe add to color-palette.scss?
 
       &.gux-show {
         display: flex;

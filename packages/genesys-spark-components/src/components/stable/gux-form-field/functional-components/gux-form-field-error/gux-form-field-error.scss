@@ -13,7 +13,8 @@
     margin: var(--gux-spacing-2xs) 0;
     font-size: 12px;
     line-height: 20px;
-    color: var(--gux-black-50);
+    color: var(--gux-alert-red-60);
+    font-family: Noto Sans;
 
     &.gux-show {
       display: flex;

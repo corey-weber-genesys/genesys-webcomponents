@@ -3,8 +3,8 @@
 @import (reference) '../../../../../style/typography.less';
 
 // Variables part
-@range-active: @gse-ui-slider-handle-active-backgroundColor;
-@thumb-diameter: @gse-ui-slider-handle-width;
+@range-active: #252e78;
+@thumb-diameter: 20px;
 @track-width: 100%;
 @track-height: 4px;
 @track-radius: 0;
@@ -22,6 +22,7 @@
   width: @thumb-diameter;
   height: @thumb-diameter;
   cursor: pointer;
+  background: #4856cb;
   border-radius: 100%;
 }
 
@@ -128,6 +129,20 @@ gux-form-field-range {
 
     .gux-range-tooltip {
       visibility: visible;
+    }
+  }
+
+  input[type='range']:hover {
+    &::-webkit-slider-thumb {
+      background-color: #3742a2;
+    }
+
+    &::-moz-range-thumb {
+      background-color: #3742a2;
+    }
+
+    &::-ms-thumb {
+      background-color: #3742a2;
     }
   }
 }
