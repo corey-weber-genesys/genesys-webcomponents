@@ -162,6 +162,7 @@ $slider-border: var(--gux-grey-30);
       border: 1px solid $slider-border;
       border-radius: 4px;
       box-shadow: rgba(32, 41, 55, 0.24) 0px 2px 4px;
+      // @include gux-shadow-20; // TODO: doesn't look like the gux-shadow-20 mixin produces correct css?
 
       &::after,
       &::before {

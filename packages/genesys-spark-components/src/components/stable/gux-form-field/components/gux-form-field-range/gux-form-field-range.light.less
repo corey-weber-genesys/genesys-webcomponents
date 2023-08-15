@@ -10,6 +10,10 @@
 @track-radius: 0;
 @contrast: 5%;
 @slider-border: @gux-grey-30;
+@handle-enabled-background: #4856cb;
+@handle-hover-background: #3742a2;
+@handle-active-background: #252e78;
+@handle-border-radius: 100%;
 
 .gux-track() {
   width: @track-width;
@@ -22,8 +26,8 @@
   width: @thumb-diameter;
   height: @thumb-diameter;
   cursor: pointer;
-  background: #4856cb;
-  border-radius: 100%;
+  background: @handle-enabled-background;
+  border-radius: @handle-border-radius;
 }
 
 gux-form-field-range {
@@ -52,7 +56,6 @@ gux-form-field-range {
 
       margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
       -webkit-appearance: none;
-      background: @range-active;
       border: 0 solid @range-active; // For firefox
     }
 
@@ -70,7 +73,6 @@ gux-form-field-range {
       .gux-thumb();
 
       margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
-      background: @range-active;
       border: 0 solid @range-active; // For firefox
     }
 
@@ -94,7 +96,6 @@ gux-form-field-range {
     &::-ms-thumb {
       .gux-thumb();
 
-      background: @range-active;
       border: 0 solid @range-active; // For firefox
     }
 
@@ -108,17 +109,24 @@ gux-form-field-range {
   }
 
   &.gux-active {
-    input[type='range'] {
+    input[type='range'],
+    input[type='range']:hover {
       &::-webkit-slider-thumb {
         .gux-focus-ring();
+
+        background-color: @handle-active-background;
       }
 
       &::-moz-range-thumb {
         .gux-focus-ring();
+
+        background-color: @handle-active-background;
       }
 
       &::-ms-thumb {
         .gux-focus-ring();
+
+        background-color: @handle-active-background;
       }
     }
   }
@@ -134,15 +142,15 @@ gux-form-field-range {
 
   input[type='range']:hover {
     &::-webkit-slider-thumb {
-      background-color: #3742a2;
+      background-color: @handle-hover-background;
     }
 
     &::-moz-range-thumb {
-      background-color: #3742a2;
+      background-color: @handle-hover-background;
     }
 
     &::-ms-thumb {
-      background-color: #3742a2;
+      background-color: @handle-hover-background;
     }
   }
 }
