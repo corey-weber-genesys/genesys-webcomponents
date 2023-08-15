@@ -1,0 +1,39 @@
+@import '../../../../../style/color-palette.scss';
+@import '../../../../../style/spacing.scss';
+
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldErrorStyle {
+  .gux-form-field-error {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--gse-ui-formControl-helper-padding);
+    font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
+    font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
+    line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);
+    color: var(--gse-ui-formControl-helper-errorColor);
+
+    &.gux-show {
+      display: flex;
+    }
+
+    gux-icon {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+      min-width: 16px;
+      min-height: 16px;
+      margin: var(--gux-spacing-3xs) var(--gux-spacing-2xs) 0 0;
+      color: var(--gse-ui-formControl-helper-errorColor);
+    }
+
+    .gux-message {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+  }
+}

@@ -152,10 +152,11 @@ table a {
 }
 
 @mixin gux-label {
-  @include bold-font;
-
-  font-size: 12px;
-  line-height: 16px;
+  font-family: var(--gse-ui-formControl-label-text-fontFamily);
+  font-size: var(--gse-ui-formControl-label-text-fontSize);
+  font-weight: 400; //missing token COMUI-1995.
+  line-height: var(--gse-ui-formControl-label-text-lineHeight);
+  color: var(--gse-ui-formControl-label-labelColor);
 }
 
 @mixin gux-sr-only {
