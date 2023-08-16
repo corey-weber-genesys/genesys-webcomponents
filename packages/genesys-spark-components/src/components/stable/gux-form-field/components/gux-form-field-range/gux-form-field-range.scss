@@ -34,11 +34,8 @@
 
 // Variables part
 $range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
-$thumb-diameter: 2px;
 $track-width: 100%;
 $track-height: var(--gse-ui-slider-bar-height);
-$track-radius: 0;
-$contrast: 5%;
 $slider-border: var(--gux-grey-30);
 
 @mixin gux-track {
