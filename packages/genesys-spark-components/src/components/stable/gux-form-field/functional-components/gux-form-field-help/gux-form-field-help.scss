@@ -14,7 +14,8 @@
       font-size: 12px;
       font-weight: 400;
       line-height: 20px;
-      color: var(--gux-black-100);
+      color: var(--gse-ui-formControl-helper-defaultColor);
+      font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
 
       &.gux-show {
         display: flex;
