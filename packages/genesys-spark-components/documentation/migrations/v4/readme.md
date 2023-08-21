@@ -114,7 +114,14 @@ Two new properties have been added to `gux-tooltip` which are `accent` and `anch
   + <gux-tooltip accent="dark">Tooltip</gux-tooltip>
   ```
 - Addition of `anchor` property.
+
   - The `anchor` property will display an anchor on the tooltip pointing towards the target element.
+
   ```diff
   + <gux-tooltip anchor>Tooltip</gux-tooltip>
   ```
+
+  ### gux-accordion
+
+The `arrow-position` property now accepts only two values which are `start` and `end`. Previously `beside-text` and `before-text` values were accepted. If your component is using the `before-text` value, this can be replaced with
+`start`. If your component was using the `beside-text` value this can be replaced with `end`. The default value is `end`.
