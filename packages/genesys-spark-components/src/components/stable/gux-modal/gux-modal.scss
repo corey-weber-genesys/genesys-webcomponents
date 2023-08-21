@@ -1,0 +1,145 @@
+/*
+$gse-ui-modal-closeButtonColor: #626e84; TODO
+$gse-ui-modal-headerColor: #1b2c48;
+$gse-ui-modal-backgroundColor: #ffffff; TODO
+$gse-ui-modal-shroudColor: #23395d; TODO
+$gse-ui-modal-header-gap: 12px;
+$gse-ui-modal-padding: 32px;
+$gse-ui-modal-gap: 16px;
+$gse-ui-modal-heading-fontFamily: Urbanist;
+$gse-ui-modal-heading-lineHeight: 32px;
+$gse-ui-modal-heading-fontSize: 24px;
+$gse-ui-modal-heading-fontWeight: 700;
+$gse-ui-modal-heading-letterSpacing: 2%;
+$gse-ui-modal-icon: 32px; TODO
+$gse-ui-modal-small-width: 420 px;
+$gse-ui-modal-medium-width: 680 px;
+$gse-ui-modal-large-width: 800 px;
+$gse-ui-modal-buttonBar-gap: 8px;  TODO
+$gse-ui-modal-boxShadow-x: 0;
+$gse-ui-modal-boxShadow-y: 6px;
+$gse-ui-modal-boxShadow-blur: 8px;
+$gse-ui-modal-boxShadow-spread: 1px;
+$gse-ui-modal-boxShadow-color: #23395c26;
+$gse-ui-modal-boxShadow-type: dropShadow;
+$gse-ui-modal-slot-padding: 2px 3px;
+$gse-ui-modal-borderRadius: 16px;
+$gse-ui-modal-opacity: 80%;
+*/
+
+@import '../../../style/typography.scss';
+@import '../../../style/color.scss';
+@import '../../../style/spacing.scss';
+@import '../../../style/shadows.scss';
+@import '../../../style/zindex.scss';
+
+// Style
+:host {
+  .gux-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--gux-zindex-modal, $gux-zindex-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gux-black-50;
+    // background: fade($gux-black-30, 80%);
+    background: rgba(32, 41, 55, 0.8);
+    // background: fade(black, 80%);
+    // opacity: var(--gse-ui-modal-opacity);
+
+    .gux-modal-container {
+      //   @include gux-shadow-30();
+      box-shadow: rgba(32, 41, 55, 0.4) 0px 8px 24px;
+
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--gse-ui-modal-padding);
+      background: $gux-grey-100;
+      border: 1px solid $gux-grey-30;
+      border-radius: 4px;
+
+      &.gux-small {
+        width: var(--gse-ui-modal-small-width);
+        max-height: min(368px, 100vh - 2 * #{$gux-spacing-large});
+      }
+
+      &.gux-medium {
+        width: var(--gse-ui-modal-medium-width);
+        max-height: min(640px, 100vh - 2 * #{$gux-spacing-large});
+      }
+
+      &.gux-large {
+        width: var(--gse-ui-modal-large-width);
+        max-height: min(640px, 100vh - 2 * #{$gux-spacing-large});
+      }
+
+      &.gux-dynamic {
+        max-width: calc(100vw - 2 * $gux-spacing-large);
+        max-height: calc(100vh - 2 * $gux-spacing-large);
+
+        .gux-modal-content {
+          max-height: none;
+        }
+      }
+
+      .gux-modal-header {
+        padding-bottom: var(--gse-ui-modal-gap);
+        margin: 0;
+        color: var(--gse-ui-modal-headerColor);
+        line-height: var(--gse-ui-modal-heading-fontFamily);
+        font-family: var(--gse-ui-modal-heading-fontFamily);
+        font-size: var(--gse-ui-modal-heading-fontSize);
+        font-weight: var(--gse-ui-modal-heading-fontWeight);
+        letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
+        @include h1();
+      }
+
+      //   gux-dismiss-button button {
+      //     color: var(--gse-ui-modal-closeButtonColor);
+      //   }
+
+      .gux-modal-content {
+        max-height: 432px;
+        margin: 0 8px;
+        margin-bottom: var(--gse-ui-modal-gap);
+        overflow-y: auto;
+
+        &.gux-no-buttons {
+          margin-bottom: 0;
+        }
+      }
+
+      .gux-button-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .gux-left-align-buttons {
+          gux-button {
+            margin-right: 8px;
+          }
+        }
+
+        .gux-right-align-buttons {
+          gux-button {
+            padding-left: var(--gse-ui-modal-buttonBar-gap);
+          }
+        }
+      }
+    }
+
+    .gux-modal-container {
+      @media (max-width: 416px) {
+        &.gux-small,
+        &.gux-medium,
+        &.gux-large {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
