@@ -98,7 +98,12 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
 }
 
 ::slotted(input[type='radio']:focus-visible)::before {
-  @include gux-focus-ring;
+  border-radius: var(--gse-ui-radioButton-focus-borderRadius);
+  outline: var(--gse-ui-radioButton-focus-border-width)
+    var(--gse-ui-radioButton-focus-border-style)
+    var(--gse-ui-radioButton-focus-border-color);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px $gux-grey-100;
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
@@ -125,7 +130,7 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
 ::slotted(label) {
   display: inline-block;
   font-size: 12px;
-  line-height: 24px;
+  line-height: var(--gse-ui-radioButton-label-text-lineHeight);
   vertical-align: middle;
   font-weight: var(--gse-ui-radioButton-label-text-fontWeight);
   color: var(--gse-ui-radioButton-label-foregroundColor);
