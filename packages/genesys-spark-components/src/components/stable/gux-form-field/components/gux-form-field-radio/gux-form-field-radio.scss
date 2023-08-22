@@ -102,7 +102,6 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
     var(--gse-ui-radioButton-focus-border-style)
     var(--gse-ui-radioButton-focus-border-color);
   outline-offset: 1px;
-  box-shadow: 0 0 0 1px $gux-grey-100;
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
