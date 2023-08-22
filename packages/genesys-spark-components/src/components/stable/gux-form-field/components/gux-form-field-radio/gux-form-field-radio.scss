@@ -127,7 +127,7 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
 
 ::slotted(label) {
   display: inline-block;
-  font-size: 12px;
+  font-size: var(--gse-ui-formControl-label-text-fontSize);
   line-height: var(--gse-ui-radioButton-label-text-lineHeight);
   vertical-align: middle;
   font-weight: var(--gse-ui-radioButton-label-text-fontWeight);
