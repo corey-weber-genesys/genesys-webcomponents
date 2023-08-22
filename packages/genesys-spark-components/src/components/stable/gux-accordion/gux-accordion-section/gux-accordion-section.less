@@ -46,6 +46,10 @@ section.gux-disabled {
     align-self: auto;
     padding-right: @gux-spacing-xs;
     text-align: left;
+
+    &.gux-arrow-position-beside {
+      flex-grow: 0;
+    }
   }
 
   &.gux-reverse-headings {
@@ -102,7 +106,7 @@ section.gux-disabled {
       height: @gux-spacing-medium;
     }
 
-    &.gux-arrow-position-left {
+    &.gux-arrow-position-before-text {
       order: -1;
       margin: 0 @gux-spacing-xs 0 0;
     }
