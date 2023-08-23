@@ -87,6 +87,14 @@ $gse-ui-modal-opacity: 80%;
       }
 
       .gux-modal-header {
+        gux-dismiss-button {
+          float: left;
+
+          gux-icon {
+            color: green;
+          }
+        }
+
         padding-bottom: var(--gse-ui-modal-gap);
         margin: 0;
         color: var(--gse-ui-modal-headerColor);
@@ -97,10 +105,6 @@ $gse-ui-modal-opacity: 80%;
         letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
         @include h1();
       }
-
-      //   gux-dismiss-button button {
-      //     color: var(--gse-ui-modal-closeButtonColor);
-      //   }
 
       .gux-modal-content {
         max-height: 432px;
@@ -117,11 +121,11 @@ $gse-ui-modal-opacity: 80%;
         display: flex;
         justify-content: space-between;
 
-        .gux-left-align-buttons {
-          gux-button {
-            margin-right: 8px;
-          }
-        }
+        // .gux-left-align-buttons {
+        //   gux-button {
+        //     margin-right: 8px;
+        //   }
+        // }
 
         .gux-right-align-buttons {
           gux-button {
