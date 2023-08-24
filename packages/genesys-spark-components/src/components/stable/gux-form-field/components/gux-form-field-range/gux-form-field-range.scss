@@ -106,7 +106,7 @@ $slider-border: var(--gux-grey-30);
         width: 100%;
         height: $track-height;
         margin: 6px 0;
-        background: var(--gse-ui-slider-bar-default-backgroundColor, #c6c8ce);
+        background: var(--gse-ui-slider-bar-default-backgroundColor);
 
         .gux-progress {
           height: $track-height;
