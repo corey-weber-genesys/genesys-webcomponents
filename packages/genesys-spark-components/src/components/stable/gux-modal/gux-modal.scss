@@ -44,8 +44,7 @@ $gse-ui-modal-opacity: 80%; TODO
     justify-content: center;
     color: $gux-black-50;
     background: rgba(32, 41, 55, 0.8);
-    // background: fade($gux-black-30, 80%);
-    // opacity: var(--gse-ui-modal-opacity);
+    // background: fade(var(--gse-ui-modal-shroudColor), var(--gse-ui-modal-opacity));
 
     .gux-modal-container {
       box-shadow: var(--gse-ui-modal-boxShadow-x)
