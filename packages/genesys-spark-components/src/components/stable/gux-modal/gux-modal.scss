@@ -1,30 +1,30 @@
 /*
-$gse-ui-modal-closeButtonColor: #626e84; TODO
-$gse-ui-modal-headerColor: #1b2c48;
+$gse-ui-modal-closeButtonColor Skipped (no need to specify close button styles in this ticket)
+$gse-ui-modal-headerColor
 $gse-ui-modal-backgroundColor: #ffffff; TODO
 $gse-ui-modal-shroudColor: #23395d; TODO
-$gse-ui-modal-header-gap: 12px;
-$gse-ui-modal-padding: 32px;
-$gse-ui-modal-gap: 16px;
-$gse-ui-modal-heading-fontFamily: Urbanist;
-$gse-ui-modal-heading-lineHeight: 32px;
-$gse-ui-modal-heading-fontSize: 24px;
-$gse-ui-modal-heading-fontWeight: 700;
-$gse-ui-modal-heading-letterSpacing: 2%;
-$gse-ui-modal-icon: 32px; TODO
-$gse-ui-modal-small-width: 420 px;
-$gse-ui-modal-medium-width: 680 px;
-$gse-ui-modal-large-width: 800 px;
-$gse-ui-modal-buttonBar-gap: 8px;  TODO
-$gse-ui-modal-boxShadow-x: 0;
-$gse-ui-modal-boxShadow-y: 6px;
-$gse-ui-modal-boxShadow-blur: 8px;
-$gse-ui-modal-boxShadow-spread: 1px;
-$gse-ui-modal-boxShadow-color: #23395c26;
-$gse-ui-modal-boxShadow-type: dropShadow;
-$gse-ui-modal-slot-padding: 2px 3px;
-$gse-ui-modal-borderRadius: 16px;
-$gse-ui-modal-opacity: 80%;
+$gse-ui-modal-header-gap
+$gse-ui-modal-padding
+$gse-ui-modal-gap
+$gse-ui-modal-heading-fontFamily
+$gse-ui-modal-heading-lineHeight
+$gse-ui-modal-heading-fontSize
+$gse-ui-modal-heading-fontWeight
+$gse-ui-modal-heading-letterSpacing
+$gse-ui-modal-icon Skipped (no need to specify close button styles in this ticket)
+$gse-ui-modal-small-width
+$gse-ui-modal-medium-width
+$gse-ui-modal-large-width
+$gse-ui-modal-buttonBar-gap Skip (Should the client app just specify the styles of the footer buttons since they'll have access to them?)
+$gse-ui-modal-boxShadow-x
+$gse-ui-modal-boxShadow-y
+$gse-ui-modal-boxShadow-blur
+$gse-ui-modal-boxShadow-spread
+$gse-ui-modal-boxShadow-color
+$gse-ui-modal-boxShadow-type
+$gse-ui-modal-slot-padding: 2px 3px; TODO: Asked design team where this should be used
+$gse-ui-modal-borderRadius
+$gse-ui-modal-opacity: 80%; TODO
 */
 
 @import '../../../style/typography.scss';
@@ -43,14 +43,14 @@ $gse-ui-modal-opacity: 80%;
     align-items: center;
     justify-content: center;
     color: $gux-black-50;
-    // background: fade($gux-black-30, 80%);
     background: rgba(32, 41, 55, 0.8);
-    // background: fade(black, 80%);
+    // background: fade($gux-black-30, 80%);
     // opacity: var(--gse-ui-modal-opacity);
 
     .gux-modal-container {
-      //   @include gux-shadow-30();
-      box-shadow: rgba(32, 41, 55, 0.4) 0px 8px 24px;
+      box-shadow: var(--gse-ui-modal-boxShadow-x)
+        var(--gse-ui-modal-boxShadow-y) var(--gse-ui-modal-boxShadow-blur)
+        var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
 
       position: relative;
       box-sizing: border-box;
@@ -60,7 +60,7 @@ $gse-ui-modal-opacity: 80%;
       padding: var(--gse-ui-modal-padding);
       background: $gux-grey-100;
       border: 1px solid $gux-grey-30;
-      border-radius: 4px;
+      border-radius: var(--gse-ui-modal-borderRadius);
 
       &.gux-small {
         width: var(--gse-ui-modal-small-width);
@@ -87,14 +87,6 @@ $gse-ui-modal-opacity: 80%;
       }
 
       .gux-modal-header {
-        gux-dismiss-button {
-          float: left;
-
-          gux-icon {
-            color: green;
-          }
-        }
-
         padding-bottom: var(--gse-ui-modal-gap);
         margin: 0;
         color: var(--gse-ui-modal-headerColor);
@@ -108,9 +100,9 @@ $gse-ui-modal-opacity: 80%;
 
       .gux-modal-content {
         max-height: 432px;
-        margin: 0 8px;
         margin-bottom: var(--gse-ui-modal-gap);
         overflow-y: auto;
+        text-align: center;
 
         &.gux-no-buttons {
           margin-bottom: 0;
@@ -120,18 +112,6 @@ $gse-ui-modal-opacity: 80%;
       .gux-button-footer {
         display: flex;
         justify-content: space-between;
-
-        // .gux-left-align-buttons {
-        //   gux-button {
-        //     margin-right: 8px;
-        //   }
-        // }
-
-        .gux-right-align-buttons {
-          gux-button {
-            padding-left: var(--gse-ui-modal-buttonBar-gap);
-          }
-        }
       }
     }
 

@@ -114,7 +114,7 @@
                 </div>
                 <div slot="left-align-buttons">
                     <gux-button type="button" accent="primary">Accept</gux-button>
-                    <gux-button type="button" accent="primary">Decline</gux-button>
+                    <gux-button type="button">Decline</gux-button>
                 </div>
                 <div slot="right-align-buttons">
                     <gux-button type="button">Cancel</gux-button>
@@ -236,3 +236,9 @@
     >Open</gux-button
   >
 </div>
+
+<style>
+  [slot='left-align-buttons'] gux-button {
+    margin-right: 8px;
+  }
+</style>
