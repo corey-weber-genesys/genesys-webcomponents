@@ -129,9 +129,13 @@
       }
 
       &:focus-visible {
-        outline: 2px var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focusRing-defaultColor); // missing token COMUI-1665.
-        border-radius: 2px; // mssing token COMUI-1665.
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
+        border: var(--gse-ui-formControl-input-active-border-width)
+          var(--gse-ui-formControl-input-active-border-style)
+          var(--gse-ui-formControl-input-active-border-color);
+        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
       }
     }
 
@@ -144,10 +148,10 @@
 
 .gux-list-container {
   max-height: 150px;
-  padding: 8px 0;
-  margin: 0;
-  overflow-y: scroll;
-  list-style: none;
+  //padding: 8px 0;
+  // margin: 0;
+  // overflow-y: scroll;
+  // list-style: none;
   //   background-color: @gux-type-dark;
   //  border: 1px solid @gux-grey-30;
   //   border-radius: 4px;
