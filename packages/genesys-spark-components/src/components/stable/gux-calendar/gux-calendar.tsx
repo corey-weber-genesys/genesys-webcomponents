@@ -505,6 +505,16 @@ export class GuxCalendar {
     ) as JSX.Element;
   }
 
+  renderFooterSlot(): JSX.Element {
+    return this.hasFooterSlot
+      ? ((
+          <div class="gux-footer">
+            <slot name="footer"></slot>
+          </div>
+        ) as JSX.Element)
+      : (null as JSX.Element);
+  }
+
   render() {
     return (
       <div class="gux-calendar">
@@ -534,11 +544,7 @@ export class GuxCalendar {
             this.renderCalendarTable(index)
           )}
         </div>
-        {this.hasFooterSlot && (
-          <div class="gux-footer">
-            <slot name="footer"></slot>
-          </div>
-        )}
+        {this.renderFooterSlot()}
       </div>
     ) as JSX.Element;
   }

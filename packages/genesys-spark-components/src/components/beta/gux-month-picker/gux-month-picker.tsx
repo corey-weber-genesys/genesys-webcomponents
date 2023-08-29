@@ -72,6 +72,9 @@ export class GuxMonthPicker {
   expanded: boolean = false;
 
   @State()
+  hasFooterSlot: boolean = false;
+
+  @State()
   locale: string;
 
   @Listen('keydown')
@@ -109,6 +112,7 @@ export class GuxMonthPicker {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.locale = getDesiredLocale(this.root);
+    this.hasFooterSlot = !!this.root.querySelector('[slot="footer"]');
   }
 
   private isOutOfBounds(value: GuxISOYearMonth): boolean {
@@ -364,8 +368,16 @@ export class GuxMonthPicker {
         value={this.value}
         min={this.min}
         max={this.max}
-      />
+      >
+        {this.renderFooter()}
+      </gux-month-calendar>
     ) as JSX.Element;
+  }
+
+  private renderFooter(): JSX.Element {
+    return this.hasFooterSlot
+      ? ((<slot slot="footer" name="footer" />) as JSX.Element)
+      : (null as JSX.Element);
   }
 
   render(): JSX.Element {

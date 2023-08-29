@@ -66,14 +66,18 @@
     }
   }
 
-  .gux-content {
-    display: flex;
-    align-items: flex-start;
+  .gux-content,
+  .gux-footer {
     padding: 20px 24px;
-    color: @gux-black-50;
     background-color: @gux-grey-100;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
+  }
+
+  .gux-content {
+    display: flex;
+    align-items: flex-start;
+    color: @gux-black-50;
 
     table {
       width: 168px;
@@ -158,7 +162,6 @@
   }
 
   .gux-footer {
-    padding: 20px;
     border-top: 1px solid @gux-grey-60;
   }
 }

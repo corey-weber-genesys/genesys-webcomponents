@@ -63,6 +63,38 @@
 <h3>Sunday</h3>
 <gux-datepicker start-day-of-week="7"></gux-datepicker>
 
+<h2>Footer Slot</h2>
+
+<h3>Footer Empty</h3>
+<gux-datepicker
+  mode="range"
+  label-position="above"
+  value="2019-11-25/2019-12-02"
+  number-of-months="2"
+>
+  <div slot="footer">Footer Section Here</div>
+</gux-datepicker>
+
+<h3>Footer Time Zone</h3>
+<gux-datepicker
+  mode="range"
+  label-position="above"
+  value="2019-11-25/2019-12-02"
+  number-of-months="2"
+>
+  <div slot="footer">
+    <div id="footer-container">
+      <div class="gux-label">Time Zone</div>
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="America/Detroit"
+        ,
+        local-d
+      />
+    </div>
+  </div>
+</gux-datepicker>
+
 <h2>Languages</h2>
 <div id="languages-container"></div>
 
@@ -86,6 +118,12 @@
   });
 })()"
 >
+  #footer-container {
+    .gux-label {
+      margin-bottom: 5px;
+    }
+  }
+
   #languages-container {
     display: flex;
     flex-direction: column;

@@ -259,6 +259,17 @@ export class GuxMonthCalendar {
     ) as JSX.Element;
   }
 
+  private renderFooter(): JSX.Element {
+    const hasFooterSlot: boolean = !!this.root.querySelector('[slot="footer"]');
+    return hasFooterSlot
+      ? ((
+          <div class="gux-footer">
+            <slot name="footer"></slot>
+          </div>
+        ) as JSX.Element)
+      : (null as JSX.Element);
+  }
+
   private renderTrapFocusEl(): JSX.Element {
     return (
       <span onFocus={() => this.doFocusTrap()} tabindex="0"></span>
@@ -270,6 +281,7 @@ export class GuxMonthCalendar {
       <div class="gux-month-calendar">
         {this.renderHeader()}
         {this.renderMonths()}
+        {this.renderFooter()}
         {this.renderTrapFocusEl()}
       </div>
     ) as JSX.Element;

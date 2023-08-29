@@ -30,17 +30,7 @@
 
 <h2>Footer Slot</h2>
 <gux-calendar mode="single" value="1997-08-29" min-date="1997-08-25">
-  <div slot="footer">
-    <div id="footer-container">
-      <div class="gux-label">Time Zone</div>
-      <gux-time-zone-picker-beta
-        value="Etc/GMT+1"
-        workspace-default="America/Detroit"
-        ,
-        local-d
-      />
-    </div>
-  </div>
+  <div slot="footer">Footer Section Here</div>
 </gux-calendar>
 
 <h2>Languages</h2>
@@ -88,12 +78,6 @@
     gap: 10px;
     align-content: stretch;
     justify-content: flex-start;
-  }
-
-  #footer-container {
-    .gux-label {
-      margin-bottom: 5px;
-    }
   }
 
   .item {

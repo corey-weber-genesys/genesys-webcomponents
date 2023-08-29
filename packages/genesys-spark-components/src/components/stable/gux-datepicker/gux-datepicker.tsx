@@ -739,8 +739,17 @@ export class GuxDatepicker {
         maxDate={this.maxDate}
         numberOfMonths={this.numberOfMonths}
         startDayOfWeek={this.startDayOfWeek}
-      />
+      >
+        {this.renderFooterSlot()}
+      </gux-calendar>
     ) as JSX.Element;
+  }
+
+  renderFooterSlot(): JSX.Element {
+    const hasFooterSlot: boolean = !!this.root.querySelector('[slot="footer"]');
+    return hasFooterSlot
+      ? ((<slot slot="footer" name="footer" />) as JSX.Element)
+      : (null as JSX.Element);
   }
 
   renderStartDateField(): JSX.Element {
