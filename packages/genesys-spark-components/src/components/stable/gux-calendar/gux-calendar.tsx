@@ -89,6 +89,9 @@ export class GuxCalendar {
   @State()
   selectingDate: Date | null = null;
 
+  @State()
+  hasFooterSlot: boolean = false;
+
   /**
    * Triggered when user selects a date
    */
@@ -440,6 +443,8 @@ export class GuxCalendar {
       }
     }
     this.previewValue = fromIsoDate(this.value);
+
+    this.hasFooterSlot = !!this.root.querySelector('[slot="footer"]');
   }
 
   componentDidRender() {
@@ -529,6 +534,11 @@ export class GuxCalendar {
             this.renderCalendarTable(index)
           )}
         </div>
+        {this.hasFooterSlot && (
+          <div class="gux-footer">
+            <slot name="footer"></slot>
+          </div>
+        )}
       </div>
     ) as JSX.Element;
   }
