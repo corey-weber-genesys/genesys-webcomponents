@@ -30,5 +30,13 @@ describe('gux-month-picker-beta', () => {
 
       expect(page.root).toMatchSnapshot();
     });
+
+    it(`should render with footer the component as expected`, async () => {
+      const html =
+        '<gux-month-picker-beta value=2022-01><div slot="footer">Footer</div></gux-month-picker-beta>';
+      const page = await newSpecPage({ components, language, html });
+
+      expect(page.root).toMatchSnapshot();
+    });
   });
 });

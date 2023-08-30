@@ -21,6 +21,18 @@ describe('gux-datepicker', () => {
     expect(element).toHaveAttribute('hydrated');
   });
 
+  it('renders a footer section', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-datepicker>
+          <div slot="footer">Footer</div>
+        </gux-datepicker>`
+    });
+    const datepicker = await page.find('gux-datepicker');
+    const element = await datepicker.find('pierce/.gux-footer');
+    expect(element).toBeTruthy();
+    expect(element.innerHTML).toEqual(`<slot name="footer"></slot>`);
+  });
+
   it('updates the text input state when the datepicker’s value property is set', async () => {
     const page = await newSparkE2EPage({
       html: `<gux-datepicker lang="en"></gux-datepicker>`
